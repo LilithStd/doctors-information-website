@@ -1,11 +1,10 @@
 
-type Props = {
-
-};
-export const Main = (props: Props) => {
+function Main () {
 	return (
 		<div>
-
+			Main Page
 		</div>
 	);
 };
+
+export default Main
