@@ -1,6 +1,9 @@
 import {Container} from "@mui/material";
+import NewsColumn from "../../components/content/news-column/news-column";
+import {mockNews} from "../../mock/mock-news";
 
 function Main () {
+	console.log(mockNews)
 	return (
 		<>
 			<Container
@@ -10,12 +13,12 @@ function Main () {
 					backgroundImage:`URL("images/brain_alpha.png")`,
 					backgroundSize:"cover",
 					backgroundRepeat:"no-repeat",
-					opacity: 0.3,
+					backgroundOpacity: 0.3,
 					border:"5px solid black",
 					borderRadius:"20px"
 				}}
 			>
-				<p>Main Pages</p>
+				<NewsColumn news={mockNews}/>
 			</Container>
 		</>
 	);
