@@ -11,39 +11,39 @@ import {
 } from "@mui/material";
 import FavoriteIcon from "@mui/icons-material/Favorite"
 import ShareIcon from "@mui/icons-material/Share"
-import {NewsItems} from "../../../types/news-types";
+import { ArticleItems } from "../../../types/article-types";
 
 
 interface NewsItemProps {
-	newsItem:NewsItems
+	newsItem: ArticleItems
 }
 
-function NewsItem ({newsItem}:NewsItemProps) {
-	const {id,title,text,date,images} = newsItem
-    return  (
-			<Grid item id={id} xs={12} md={4}
-			      sx={{
-				      // border: "solid 5px black",
-				      p:1
-			      }}
-			>
-				<Card sx={{ maxWidth: 345 }}>
+function NewsItem({ newsItem }: NewsItemProps) {
+	const { id, title, text, date, images } = newsItem
+	return (
+		<Grid item id={id} xs={12} md={4}
+			sx={{
+				// border: "solid 5px black",
+				p: 1
+			}}
+		>
+			<Card sx={{ maxWidth: 345 }}>
 				<CardMedia
-				component="img"
-				alt="news images"
-				height="140"
-				image={images}
+					component="img"
+					alt="news images"
+					height="140"
+					image={images}
 				/>
 				<CardContent>
-				<Typography gutterBottom variant="h5" component="div">
-					{title}
-				</Typography>
-				<Typography variant="body2" color="text.secondary">
-					{text.length > 100 ? text.slice(0,100)+'...' : text}
-				</Typography>
+					<Typography gutterBottom variant="h5" component="div">
+						{title}
+					</Typography>
+					<Typography variant="body2" color="text.secondary">
+						{text.length > 100 ? text.slice(0, 100) + '...' : text}
+					</Typography>
 				</CardContent>
 				<CardActions>
-				<Button size="small">Learn More</Button>
+					<Button size="small">Learn More</Button>
 					<IconButton aria-label="add to favorites">
 						<FavoriteIcon />
 					</IconButton>
@@ -51,10 +51,10 @@ function NewsItem ({newsItem}:NewsItemProps) {
 						<ShareIcon />
 					</IconButton>
 				</CardActions>
-				</Card>
-			</Grid>
+			</Card>
+		</Grid>
 
-    )
+	)
 }
 
 export default NewsItem;

@@ -1,17 +1,18 @@
-import {Container} from "@mui/material";
+import { Container } from "@mui/material";
 
-function Footer () {
-    return  (
+function Footer() {
+	return (
 		<Container
+			maxWidth={'xl'}
 			sx={{
-				backgroundColor:"green",
-				flexGrow:1,
-				minHeight:"10vh"
+				backgroundColor: "green",
+				flexGrow: 1,
+				minHeight: "10vh"
 			}}
 		>
-	        footer
+			footer
 		</Container>
-    )
+	)
 }
 
 export default Footer;

@@ -1,18 +1,18 @@
-import {Outlet} from "react-router-dom";
+import { Outlet } from "react-router-dom";
 import Header from "../header/header";
 import Footer from "../footer/footer";
-import {Container} from "@mui/material";
+import { Container } from "@mui/material";
 
-function Layout()  {
+function Layout() {
 	return (
 		<>
-			<Header/>
-			<Container>
+			<Header />
+			<Container maxWidth={'xl'}>
 				<main>
-					<Outlet/>
+					<Outlet />
 				</main>
 			</Container>
-			<Footer/>
+			<Footer />
 		</>
 	)
 }
