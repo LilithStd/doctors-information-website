@@ -1,0 +1,67 @@
+{
+    "articles": [
+	{
+		"id": "1",
+		"images": "images/BrainThumbnail.jpg",
+		"title": "test 1",
+		"text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt eius iste suscipit vel voluptatum! Corporis deleniti et harum in sint vero, voluptas. Ab corporis doloribus ex magni quas quibusdam sed! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis minima ratione saepe sequi! Aspernatur delectus eaque labore laboriosam minima, numquam obcaecati perferendis possimus quas quia quibusdam ratione, sed soluta vel. ",
+		"date": "25/01/2020" 
+	},
+	{
+		"id": "2",
+		"images": "images/BrainThumbnail.jpg",
+		"title": "test 2",
+		"text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt eius iste suscipit vel voluptatum! Corporis deleniti et harum in sint vero, voluptas. Ab corporis doloribus ex magni quas quibusdam sed! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis minima ratione saepe sequi! Aspernatur delectus eaque labore laboriosam minima, numquam obcaecati perferendis possimus quas quia quibusdam ratione, sed soluta vel. ",
+		"date": "25/01/2020" 
+	},
+		{
+		"id": "3",
+		"images": "images/BrainThumbnail.jpg",
+		"title": "test 3",
+		"text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt eius iste suscipit vel voluptatum! Corporis deleniti et harum in sint vero, voluptas. Ab corporis doloribus ex magni quas quibusdam sed! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis minima ratione saepe sequi! Aspernatur delectus eaque labore laboriosam minima, numquam obcaecati perferendis possimus quas quia quibusdam ratione, sed soluta vel. ",
+		"date": "25/01/2020" 
+	},
+		{
+		"id": "4",
+		"images": "images/BrainThumbnail.jpg",
+		"title": "test 4",
+		"text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt eius iste suscipit vel voluptatum! Corporis deleniti et harum in sint vero, voluptas. Ab corporis doloribus ex magni quas quibusdam sed! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis minima ratione saepe sequi! Aspernatur delectus eaque labore laboriosam minima, numquam obcaecati perferendis possimus quas quia quibusdam ratione, sed soluta vel. ",
+		"date": "25/01/2020" 
+	},
+		{
+		"id": "5",
+		"images": "images/BrainThumbnail.jpg",
+		"title": "test 5",
+		"text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt eius iste suscipit vel voluptatum! Corporis deleniti et harum in sint vero, voluptas. Ab corporis doloribus ex magni quas quibusdam sed! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis minima ratione saepe sequi! Aspernatur delectus eaque labore laboriosam minima, numquam obcaecati perferendis possimus quas quia quibusdam ratione, sed soluta vel. ",
+		"date": "25/01/2020" 
+	},
+		{
+		"id": "6",
+		"images": "images/BrainThumbnail.jpg",
+		"title": "test 6",
+		"text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt eius iste suscipit vel voluptatum! Corporis deleniti et harum in sint vero, voluptas. Ab corporis doloribus ex magni quas quibusdam sed! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis minima ratione saepe sequi! Aspernatur delectus eaque labore laboriosam minima, numquam obcaecati perferendis possimus quas quia quibusdam ratione, sed soluta vel. ",
+		"date": "25/01/2020" 
+	},
+		{
+		"id": "7",
+		"images": "images/BrainThumbnail.jpg",
+		"title": "test 7",
+		"text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt eius iste suscipit vel voluptatum! Corporis deleniti et harum in sint vero, voluptas. Ab corporis doloribus ex magni quas quibusdam sed! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis minima ratione saepe sequi! Aspernatur delectus eaque labore laboriosam minima, numquam obcaecati perferendis possimus quas quia quibusdam ratione, sed soluta vel. ",
+		"date": "25/01/2020" 
+	},
+		{
+		"id": "8",
+		"images": "images/BrainThumbnail.jpg",
+		"title": "test 8",
+		"text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt eius iste suscipit vel voluptatum! Corporis deleniti et harum in sint vero, voluptas. Ab corporis doloribus ex magni quas quibusdam sed! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis minima ratione saepe sequi! Aspernatur delectus eaque labore laboriosam minima, numquam obcaecati perferendis possimus quas quia quibusdam ratione, sed soluta vel. ",
+		"date": "25/01/2020" 
+	},
+		{
+		"id": "9",
+		"images": "images/BrainThumbnail.jpg",
+		"title": "test 9",
+		"text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt eius iste suscipit vel voluptatum! Corporis deleniti et harum in sint vero, voluptas. Ab corporis doloribus ex magni quas quibusdam sed! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis minima ratione saepe sequi! Aspernatur delectus eaque labore laboriosam minima, numquam obcaecati perferendis possimus quas quia quibusdam ratione, sed soluta vel. ",
+		"date": "25/01/2020" 
+	}
+]
+}

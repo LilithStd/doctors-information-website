@@ -1,6 +1,6 @@
 import {nanoid} from "nanoid";
 
-export const mockNews = [
+export const mockArticle = [
 	{
 		id:nanoid(),
 		images:'images/BrainThumbnail.jpg',

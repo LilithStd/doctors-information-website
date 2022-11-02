@@ -4,6 +4,7 @@ import {
 	CardActions,
 	CardContent,
 	CardMedia,
+	CircularProgress,
 	Container,
 	Grid,
 	IconButton,
@@ -14,12 +15,14 @@ import ShareIcon from "@mui/icons-material/Share"
 import { ArticleItems } from "../../../types/article-types";
 
 
-interface NewsItemProps {
-	newsItem: ArticleItems
+interface ArtcleItemProps {
+	articleItem: ArticleItems
 }
 
-function NewsItem({ newsItem }: NewsItemProps) {
-	const { id, title, text, date, images } = newsItem
+<CircularProgress color="inherit" />
+
+function ArticleItem({ articleItem }: ArtcleItemProps) {
+	const { id, title, text, date, images } = articleItem
 	return (
 		<Grid item id={id} xs={12} md={4}
 			sx={{
@@ -57,4 +60,4 @@ function NewsItem({ newsItem }: NewsItemProps) {
 	)
 }
 
-export default NewsItem;
+export default ArticleItem;

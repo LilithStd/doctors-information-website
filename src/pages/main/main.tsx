@@ -1,17 +1,27 @@
-import { Button, Container, Typography } from "@mui/material";
-import { textAlign } from "@mui/system";
+import { Button, Container, Divider, Grid, Typography } from "@mui/material";
 import { useEffect, useState } from "react";
-import NewsColumn from "../../components/content/news-column/news-column";
-import { mockNews } from "../../mock/mock-news";
+import ArticleColumn from "../../components/content/article-column/article-column";
+import ArticleMainCard from "../../components/content/article-main-card/article-main-card";
+import { useAppDispatch, useAppSelector } from "../../store/hooks";
+import { fetchArticles } from "../../store/reducer/actionCreators";
 
 function Main() {
+	const { articles } = useAppSelector(state => state.articleReducer)
+	const dispatch = useAppDispatch()
+
 	const [isCurrentArticle, setCurrentArticle] = useState(0)
-	const [isActiveArticle, setIsActiveArticle] = useState([...mockNews])
+	const [isActiveArticle, setIsActiveArticle] = useState([...articles])
+
+
 
 
 	useEffect(() => {
-		setIsActiveArticle([...mockNews.slice(isCurrentArticle, isCurrentArticle + 3)])
-	}, [isCurrentArticle])
+		setIsActiveArticle([...articles.slice(isCurrentArticle, isCurrentArticle + 3)])
+	}, [articles, isCurrentArticle])
+
+	useEffect(() => {
+		dispatch(fetchArticles())
+	}, [dispatch])
 
 	const renderArticleNext = () => {
 		setCurrentArticle(isCurrentArticle + 1)
@@ -22,36 +32,53 @@ function Main() {
 	}
 
 	return (
-		<>
-			<Container
-				maxWidth={'xl'}
-				sx={{
-					backgroundColor: "gray",
-					minHeight: "85vh",
-					backgroundImage: `URL("images/brain_alpha.png")`,
-					backgroundSize: "cover",
-					backgroundRepeat: "no-repeat",
-					backgroundOpacity: 0.3,
-					border: "5px solid black",
-					borderRadius: "20px",
-					// textAlign: "center",
-
-				}}
+		<Grid
+			container
+			spacing={2}
+			// columns={{ xs: 4, sm: 8, md: 6, lg: 12 }}
+			sx={{
+				border: "5px solid black",
+				borderRadius: "20px",
+				minHeight: "85vh",
+				backgroundColor: "gray",
+			}}>
+			<Grid
+				item
+				md={4}
+				lg={5}
 			>
-				<Typography variant="h5" color="initial">Article</Typography>
+				<Container
+					sx={{
+						// backgroundImage: `URL("images/brain_alpha.png")`,
+						backgroundSize: "cover",
+						backgroundRepeat: "no-repeat",
+						backgroundOpacity: 0.3,
+					}}
+				>
+					<Typography variant="h5" color="initial">Article</Typography>
 
-				{isCurrentArticle === 0 ? <Button variant="contained" sx={{ visibility: 'hidden' }}>Previous Article</Button> : <Button variant="contained" onClick={renderArticlePrevious}>Previous Article</Button>}
-				<NewsColumn news={isActiveArticle} />
-				{isCurrentArticle === mockNews.length - 3 ? <Button variant="contained" sx={{ visibility: 'hidden' }}>Next Article</Button> : <Button variant="contained" onClick={renderArticleNext}>Next Article</Button>}
-			</Container>
-			<Container>
+					{isCurrentArticle === 0 ? <Button variant="contained" sx={{ visibility: 'hidden' }}>Previous Article</Button> : <Button variant="contained" onClick={renderArticlePrevious}>Previous Article</Button>}
+					<ArticleColumn article={isActiveArticle} />
+					{isCurrentArticle === articles.length - 3 ? <Button variant="contained" sx={{ visibility: 'hidden' }}>Next Article</Button> : <Button variant="contained" onClick={renderArticleNext}>Next Article</Button>}
+				</Container>
+			</Grid>
+			<Grid
+				item
+				lg={2}
+			>
+				<Divider orientation="vertical" flexItem />
+			</Grid>
+			<Grid
+				item
+				md={4}
+				lg={5}
+			>
+				<ArticleMainCard />
+			</Grid>
+		</Grid>
 
-			</Container>
-		</>
 	);
 };
 
 export default Main
-
-
 
