@@ -12,6 +12,14 @@ export const fetchArticles = () =>  async (dispatch: AppDispatch) => {
         dispatch(articleSlice.actions.setLoadingArticlesStatus())
     } catch (e)  {
         // @ts-ignore
-        dispatch(hotelSlice.actions.loadHotelsError(e.message))
+        dispatch(articleSlice.actions.loadArticlesError(e.message))
+    }
+}
+
+export const fetchCurrentArticle = (currentArticle: ArticleItems) =>   async (dispatch: AppDispatch) => {
+    try {
+        dispatch(articleSlice.actions.setCurrentArticle(currentArticle))
+    } catch {
+
     }
 }

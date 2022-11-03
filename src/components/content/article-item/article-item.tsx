@@ -13,6 +13,8 @@ import {
 import FavoriteIcon from "@mui/icons-material/Favorite"
 import ShareIcon from "@mui/icons-material/Share"
 import { ArticleItems } from "../../../types/article-types";
+import { useAppDispatch } from "../../../store/hooks";
+import { fetchCurrentArticle } from "../../../store/reducer/actionCreators";
 
 
 interface ArtcleItemProps {
@@ -21,8 +23,15 @@ interface ArtcleItemProps {
 
 <CircularProgress color="inherit" />
 
+
+
 function ArticleItem({ articleItem }: ArtcleItemProps) {
 	const { id, title, text, date, images } = articleItem
+	const dispatch = useAppDispatch()
+	const LearnMoreHundler = () => {
+		dispatch(fetchCurrentArticle(articleItem))
+	}
+
 	return (
 		<Grid item id={id} xs={12} md={4}
 			sx={{
@@ -46,7 +55,7 @@ function ArticleItem({ articleItem }: ArtcleItemProps) {
 					</Typography>
 				</CardContent>
 				<CardActions>
-					<Button size="small">Learn More</Button>
+					<Button size="small" onClick={LearnMoreHundler}>Learn More</Button>
 					<IconButton aria-label="add to favorites">
 						<FavoriteIcon />
 					</IconButton>

@@ -1,35 +1,24 @@
-import { Button, Container, Divider, Grid, Typography } from "@mui/material";
-import { useEffect, useState } from "react";
-import ArticleColumn from "../../components/content/article-column/article-column";
+import { Container, Divider, Grid, Typography } from "@mui/material";
+import { useEffect } from "react";
 import ArticleMainCard from "../../components/content/article-main-card/article-main-card";
 import { useAppDispatch, useAppSelector } from "../../store/hooks";
 import { fetchArticles } from "../../store/reducer/actionCreators";
+import ArticlesComponent from "../../components/content/articles-component/articles-component";
+import NoArticleMessage from "../../components/content/no-articles-message/no-article-message";
 
 function Main() {
 	const { articles } = useAppSelector(state => state.articleReducer)
+	const { isArticleLoading } = useAppSelector(state => state.articleReducer)
+	const { error } = useAppSelector(state => state.articleReducer)
 	const dispatch = useAppDispatch()
 
-	const [isCurrentArticle, setCurrentArticle] = useState(0)
-	const [isActiveArticle, setIsActiveArticle] = useState([...articles])
-
-
-
-
 	useEffect(() => {
-		setIsActiveArticle([...articles.slice(isCurrentArticle, isCurrentArticle + 3)])
-	}, [articles, isCurrentArticle])
+		if (!isArticleLoading) {
+			console.log(1);
 
-	useEffect(() => {
-		dispatch(fetchArticles())
-	}, [dispatch])
-
-	const renderArticleNext = () => {
-		setCurrentArticle(isCurrentArticle + 1)
-	}
-
-	const renderArticlePrevious = () => {
-		setCurrentArticle(isCurrentArticle - 1)
-	}
+			dispatch(fetchArticles())
+		}
+	}, [dispatch, isArticleLoading])
 
 	return (
 		<Grid
@@ -56,10 +45,7 @@ function Main() {
 					}}
 				>
 					<Typography variant="h5" color="initial">Article</Typography>
-
-					{isCurrentArticle === 0 ? <Button variant="contained" sx={{ visibility: 'hidden' }}>Previous Article</Button> : <Button variant="contained" onClick={renderArticlePrevious}>Previous Article</Button>}
-					<ArticleColumn article={isActiveArticle} />
-					{isCurrentArticle === articles.length - 3 ? <Button variant="contained" sx={{ visibility: 'hidden' }}>Next Article</Button> : <Button variant="contained" onClick={renderArticleNext}>Next Article</Button>}
+					{isArticleLoading ? <ArticlesComponent articles={articles} /> : <NoArticleMessage error={error} />}
 				</Container>
 			</Grid>
 			<Grid

@@ -31,11 +31,14 @@ export const articleSlice = createSlice({
             state.articles = action.payload
             state.error = ''
         },
+        setCurrentArticle(state, action: PayloadAction<ArticleItems>) {
+            state.currentArticle = action.payload
+        },
         setLoadingArticlesStatus  (state) {
             state.isArticleLoading = true
             state.error = ''
         },
-        loadHotelsError(state, action: PayloadAction<string>) {
+        loadArticlesError(state, action: PayloadAction<string>) {
             state.error = action.payload
             state.isArticleLoading = false
         },
