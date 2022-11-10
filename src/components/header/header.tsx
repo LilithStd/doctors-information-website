@@ -9,9 +9,18 @@ import {
 } from "@mui/material";
 import MenuIcon from '@mui/icons-material/Menu';
 import ThemeSwitcher from "../content/theme-switcher/theme-switcher";
+import { Link, useNavigate } from "react-router-dom";
+import { AppRoute } from "../../const/app-route";
 
 
 function Header() {
+	const navigate = useNavigate();
+	const redirectToTestsPageHandler = () => {
+		navigate(AppRoute.Tests)
+	}
+	const redirectToMainPageHandler = () => {
+		navigate(AppRoute.Main)
+	}
 
 	return (
 		<AppBar
@@ -62,8 +71,8 @@ function Header() {
 
 					}}
 				>
-					<Button>One</Button>
-					<Button>Two</Button>
+					<Button onClick={redirectToMainPageHandler}>Главная</Button>
+					<Button onClick={redirectToTestsPageHandler}>Тесты</Button>
 					<Button>Three</Button>
 					<Button>Four</Button>
 					<Button>Five</Button>

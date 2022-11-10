@@ -11,8 +11,6 @@ interface ArticlesComponentProps {
 
 function ArticlesComponent({ articles }: ArticlesComponentProps) {
 
-    const dispatch = useAppDispatch()
-
     const [isCurrentArticle, setCurrentArticle] = useState(0)
     const [isActiveArticle, setIsActiveArticle] = useState([...articles])
 
@@ -22,10 +20,6 @@ function ArticlesComponent({ articles }: ArticlesComponentProps) {
     useEffect(() => {
         setIsActiveArticle([...articles.slice(isCurrentArticle, isCurrentArticle + 3)])
     }, [articles, isCurrentArticle])
-
-    useEffect(() => {
-        dispatch(fetchArticles())
-    }, [dispatch])
 
     const renderArticleNext = () => {
         setCurrentArticle(isCurrentArticle + 1)

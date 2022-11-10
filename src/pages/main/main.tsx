@@ -2,23 +2,21 @@ import { Container, Divider, Grid, Typography } from "@mui/material";
 import { useEffect } from "react";
 import ArticleMainCard from "../../components/content/article-main-card/article-main-card";
 import { useAppDispatch, useAppSelector } from "../../store/hooks";
-import { fetchArticles } from "../../store/reducer/actionCreators";
+import { fetchArticles, fetchCurrentArticle } from "../../store/reducer/actionCreators";
 import ArticlesComponent from "../../components/content/articles-component/articles-component";
 import NoArticleMessage from "../../components/content/no-articles-message/no-article-message";
+import { getRandomItem } from "../../utils/utils";
 
 function Main() {
-	const { articles } = useAppSelector(state => state.articleReducer)
+	const dispatch = useAppDispatch()
 	const { isArticleLoading } = useAppSelector(state => state.articleReducer)
 	const { error } = useAppSelector(state => state.articleReducer)
-	const dispatch = useAppDispatch()
+	const { articles } = useAppSelector(state => state.articleReducer)
 
-	useEffect(() => {
-		if (!isArticleLoading) {
-			console.log(1);
+	if (!isArticleLoading && error === '') {
+		dispatch(fetchArticles())
+	}
 
-			dispatch(fetchArticles())
-		}
-	}, [dispatch, isArticleLoading])
 
 	return (
 		<Grid
@@ -59,7 +57,7 @@ function Main() {
 				md={4}
 				lg={5}
 			>
-				<ArticleMainCard />
+				{isArticleLoading ? <ArticleMainCard articles={articles} /> : <NoArticleMessage error={error} />}
 			</Grid>
 		</Grid>
 

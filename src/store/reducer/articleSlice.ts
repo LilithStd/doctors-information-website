@@ -6,6 +6,7 @@ interface ArticlesState {
     isArticleLoading: boolean;
     currentArticle:ArticleItems,
     articlesSort: ArticleItems[];
+    currentArticleActive: boolean,
     error: string;
 }
 
@@ -19,6 +20,7 @@ const initialState: ArticlesState = {
         text:'',
         date:''
     },
+    currentArticleActive: false,
     articlesSort: [],
     error:''
 }
@@ -33,6 +35,7 @@ export const articleSlice = createSlice({
         },
         setCurrentArticle(state, action: PayloadAction<ArticleItems>) {
             state.currentArticle = action.payload
+            state.currentArticleActive = true
         },
         setLoadingArticlesStatus  (state) {
             state.isArticleLoading = true
