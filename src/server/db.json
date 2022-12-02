@@ -73,13 +73,19 @@
 					"title": "Depressia question 1",
 					"variants":[
 						{
-							"first":"111111",					"count": 1		
+							"id": "1",
+							"title":"111111",
+							"count": 1		
 						},
 						{
-							"second":"22222",					"count": 2	
+							"id":"2",
+							"title":"22222",
+							"count": 2	
 						},
-						{
-							"third":"33333",					"count": 3		
+						{	
+							"id":"3",
+							"title":"33333",
+							"count": 3		
 						}
 						
 					]
@@ -88,13 +94,19 @@
 					"title": "Depressia question 2",
 					"variants":[
 						{
-							"first":"111111",					"count": 1		
+							"id": "1",
+							"title":"111111",
+							"count": 1		
 						},
 						{
-							"second":"22222",					"count": 2	
+							"id": "2",
+							"title":"22222",
+							"count": 2	
 						},
 						{
-							"third":"33333",					"count": 3		
+							"id": "3",
+							"title":"33333",
+							"count": 3		
 						}
 						
 					]
@@ -103,13 +115,19 @@
 					"title": "Depressia question 3",
 					"variants":[
 						{
-							"first":"111111",					"count": 1		
+							"id": "1",
+							"title":"111111",
+							"count": 1		
 						},
 						{
-							"second":"22222",					"count": 2	
+							"id": "2",
+							"title":"22222",
+							"count": 2	
 						},
 						{
-							"third":"33333",					"count": 3		
+							"id": "3",
+							"title":"33333",
+							"count": 3		
 						}
 						
 					]
@@ -126,13 +144,19 @@
 					"title": "Shizofrenija question 1",
 					"variants":[
 						{
-							"first":"111111",					"count": 1		
+							"id": "1",
+							"title":"111111",
+							"count": 1		
 						},
 						{
-							"second":"22222",					"count": 2	
+							"id": "2",
+							"title":"22222",
+							"count": 2	
 						},
 						{
-							"third":"33333",					"count": 3		
+							"id": "3",
+							"title":"33333",
+							"count": 3		
 						}
 						
 					]
@@ -141,13 +165,19 @@
 					"title": "Shizofrenija question 2",
 					"variants":[
 						{
-							"first":"111111",					"count": 1		
+							"id": "1",
+							"title":"111111",
+							"count": 1		
 						},
 						{
-							"second":"22222",					"count": 2	
+							"id": "2",
+							"title":"22222",
+							"count": 2	
 						},
 						{
-							"third":"33333",					"count": 3		
+							"id": "3",
+							"title":"33333",
+							"count": 3		
 						}
 						
 					]
@@ -156,13 +186,19 @@
 					"title": "Shizofrenija question 3",
 					"variants":[
 						{
-							"first":"111111",					"count": 1		
+							"id": "1",
+							"title":"111111",
+							"count": 1		
 						},
 						{
-							"second":"22222",					"count": 2	
+							"id": "2",
+							"title":"22222",
+							"count": 2	
 						},
 						{
-							"third":"33333",					"count": 3		
+							"id": "3",
+							"title":"33333",
+							"count": 3		
 						}
 						
 					]
@@ -179,13 +215,19 @@
 					"title": "Trevoga question 1",
 					"variants":[
 						{
-							"first":"111111",					"count": 1		
+							"id": "1",
+							"title":"111111",
+							"count": 1		
 						},
 						{
-							"second":"22222",					"count": 2	
+							"id": "2",
+							"title":"22222",
+							"count": 2	
 						},
 						{
-							"third":"33333",					"count": 3		
+							"id": "3",
+							"title":"33333",
+							"count": 3		
 						}
 						
 					]
@@ -194,13 +236,19 @@
 					"title": "Trevoga question 2",
 					"variants":[
 						{
-							"first":"111111",					"count": 1		
+							"id": "1",
+							"title":"111111",
+							"count": 1		
 						},
 						{
-							"second":"22222",					"count": 2	
+							"id": "2",
+							"title":"22222",
+							"count": 2	
 						},
 						{
-							"third":"33333",					"count": 3		
+							"id": "3",
+							"title":"33333",
+							"count": 3		
 						}
 						
 					]
@@ -209,13 +257,19 @@
 					"title": "Trevoga question 3",
 					"variants":[
 						{
-							"first":"111111",					"count": 1		
+							"id": "1",
+							"title":"111111",
+							"count": 1		
 						},
 						{
-							"second":"22222",					"count": 2	
+							"id": "2",
+							"title":"22222",
+							"count": 2	
 						},
 						{
-							"third":"33333",					"count": 3		
+							"id": "3",
+							"title":"33333",
+							"count": 3		
 						}
 						
 					]
@@ -232,13 +286,19 @@
 					"title": "Autizm question 1",
 					"variants":[
 						{
-							"first":"111111",					"count": 1		
+							"id": "1",
+							"title":"111111",
+							"count": 1		
 						},
 						{
-							"second":"22222",					"count": 2	
+							"id": "2",
+							"title":"22222",
+							"count": 2	
 						},
 						{
-							"third":"33333",					"count": 3		
+							"id": "3",
+							"title":"33333",
+							"count": 3		
 						}
 						
 					]
@@ -247,13 +307,19 @@
 					"title": "Autizm question 2",
 					"variants":[
 						{
-							"first":"111111",					"count": 1		
+							"id": "1",
+							"title":"111111",
+							"count": 1		
 						},
 						{
-							"second":"22222",					"count": 2	
+							"id": "2",
+							"title":"22222",
+							"count": 2	
 						},
 						{
-							"third":"33333",					"count": 3		
+							"id": "3",
+							"title":"33333",
+							"count": 3		
 						}
 						
 					]
@@ -262,13 +328,19 @@
 					"title": "Autizm question 3",
 					"variants":[
 						{
-							"first":"111111",					"count": 1		
+							"id": "1",
+							"title":"111111",
+							"count": 1		
 						},
 						{
-							"second":"22222",					"count": 2	
+							"id": "2",
+							"title":"22222",
+							"count": 2	
 						},
 						{
-							"third":"33333",					"count": 3		
+							"id": "3",
+							"title":"33333",
+							"count": 3		
 						}
 						
 					]
@@ -285,13 +357,19 @@
 					"title": "Rasstoistva Sna question 1",
 					"variants":[
 						{
-							"first":"111111",					"count": 1		
+							"id": "1",
+							"title":"111111",
+							"count": 1		
 						},
 						{
-							"second":"22222",					"count": 2	
+							"id": "2",
+							"title":"22222",
+							"count": 2	
 						},
 						{
-							"third":"33333",					"count": 3		
+							"id": "3",
+							"title":"33333",
+							"count": 3		
 						}
 						
 					]
@@ -300,13 +378,19 @@
 					"title": "Rasstoistva Sna question 2",
 					"variants":[
 						{
-							"first":"111111",					"count": 1		
+							"id": "1",
+							"title":"111111",
+							"count": 1		
 						},
 						{
-							"second":"22222",					"count": 2	
+							"id": "2",
+							"title":"22222",
+							"count": 2	
 						},
 						{
-							"third":"33333",					"count": 3		
+							"id": "3",
+							"title":"33333",
+							"count": 3		
 						}
 						
 					]
@@ -315,13 +399,19 @@
 					"title": "Rasstoistva Sna question 3",
 					"variants":[
 						{
-							"first":"111111",					"count": 1		
+							"id": "1",
+							"title":"111111",
+							"count": 1		
 						},
 						{
-							"second":"22222",					"count": 2	
+							"id": "2",
+							"title":"22222",
+							"count": 2	
 						},
 						{
-							"third":"33333",					"count": 3		
+							"id": "3",
+							"title":"33333",
+							"count": 3		
 						}
 						
 					]
@@ -338,13 +428,19 @@
 					"title": "Pishevie rasstroistva question 1",
 					"variants":[
 						{
-							"first":"111111",					"count": 1		
+							"id": "1",
+							"title":"111111",
+							"count": 1		
 						},
 						{
-							"second":"22222",					"count": 2	
+							"id": "2",
+							"title":"22222",
+							"count": 2	
 						},
 						{
-							"third":"33333",					"count": 3		
+							"id": "3",
+							"title":"33333",
+							"count": 3		
 						}
 						
 					]
@@ -353,13 +449,19 @@
 					"title": "Pishevie rasstroistva question 2",
 					"variants":[
 						{
-							"first":"111111",					"count": 1		
+							"id": "1",
+							"title":"111111",
+							"count": 1		
 						},
 						{
-							"second":"22222",					"count": 2	
+							"id": "2",
+							"title":"22222",
+							"count": 2	
 						},
 						{
-							"third":"33333",					"count": 3		
+							"id": "3",
+							"title":"33333",
+							"count": 3		
 						}
 						
 					]
@@ -368,13 +470,19 @@
 					"title": "Pishevie rasstroistva question 3",
 					"variants":[
 						{
-							"first":"111111",					"count": 1		
+							"id": "1",
+							"title":"111111",
+							"count": 1		
 						},
 						{
-							"second":"22222",					"count": 2	
+							"id": "2",
+							"title":"22222",
+							"count": 2	
 						},
 						{
-							"third":"33333",					"count": 3		
+							"id": "3",
+							"title":"33333",
+							"count": 3		
 						}
 						
 					]
@@ -391,13 +499,19 @@
 					"title": "Demencia question 1",
 					"variants":[
 						{
-							"first":"111111",					"count": 1		
+							"id": "1",
+							"title":"111111",
+							"count": 1		
 						},
 						{
-							"second":"22222",					"count": 2	
+							"id": "2",
+							"title":"22222",
+							"count": 2	
 						},
 						{
-							"third":"33333",					"count": 3		
+							"id": "3",
+							"title":"33333",
+							"count": 3		
 						}
 						
 					]
@@ -406,13 +520,19 @@
 					"title": "Demencia question 2",
 					"variants":[
 						{
-							"first":"111111",					"count": 1		
+							"id": "1",
+							"title":"111111",
+							"count": 1		
 						},
 						{
-							"second":"22222",					"count": 2	
+							"id": "2",
+							"title":"22222",
+							"count": 2	
 						},
 						{
-							"third":"33333",					"count": 3		
+							"id": "3",
+							"title":"33333",
+							"count": 3		
 						}
 						
 					]
@@ -421,13 +541,19 @@
 					"title": "Demencia question 3",
 					"variants":[
 						{
-							"first":"111111",					"count": 1		
+							"id": "1",
+							"title":"111111",
+							"count": 1		
 						},
 						{
-							"second":"22222",					"count": 2	
+							"id": "2",
+							"title":"22222",
+							"count": 2	
 						},
 						{
-							"third":"33333",					"count": 3		
+							"id": "3",
+							"title":"33333",
+							"count": 3		
 						}
 						
 					]
@@ -444,13 +570,19 @@
 					"title": "Rasstroistva povedenija question 1",
 					"variants":[
 						{
-							"first":"111111",					"count": 1		
+							"id": "1",
+							"title":"111111",
+							"count": 1		
 						},
 						{
-							"second":"22222",					"count": 2	
+							"id": "2",
+							"title":"22222",
+							"count": 2	
 						},
 						{
-							"third":"33333",					"count": 3		
+							"id": "3",
+							"title":"33333",
+							"count": 3		
 						}
 						
 					]
@@ -459,13 +591,19 @@
 					"title": "Rasstroistva povedenija question 3",
 					"variants":[
 						{
-							"first":"111111",					"count": 1		
+							"id": "1",
+							"title":"111111",
+							"count": 1		
 						},
 						{
-							"second":"22222",					"count": 2	
+							"id": "2",
+							"title":"22222",
+							"count": 2	
 						},
 						{
-							"third":"33333",					"count": 3		
+							"id": "3",
+							"title":"33333",
+							"count": 3		
 						}
 						
 					]
@@ -474,13 +612,19 @@
 					"title": "Rasstroistva povedenija question 3",
 					"variants":[
 						{
-							"first":"111111",					"count": 1		
+							"id": "1",
+							"title":"111111",
+							"count": 1		
 						},
 						{
-							"second":"22222",					"count": 2	
+							"id": "2",
+							"title":"22222",
+							"count": 2	
 						},
 						{
-							"third":"33333",					"count": 3		
+							"id": "3",
+							"title":"33333",
+							"count": 3		
 						}
 						
 					]
@@ -497,13 +641,19 @@
 					"title": "Podrostkovie  emotions question 1",
 					"variants":[
 						{
-							"first":"111111",					"count": 1		
+							"id": "1",
+							"title":"111111",
+							"count": 1		
 						},
 						{
-							"second":"22222",					"count": 2	
+							"id": "2",
+							"title":"22222",
+							"count": 2	
 						},
 						{
-							"third":"33333",					"count": 3		
+							"id": "3",
+							"title":"33333",
+							"count": 3		
 						}
 						
 					]
@@ -512,13 +662,19 @@
 					"title": "Podrostkovie  emotions question 2",
 					"variants":[
 						{
-							"first":"111111",					"count": 1		
+							"id": "1",
+							"title":"111111",
+							"count": 1		
 						},
 						{
-							"second":"22222",					"count": 2	
+							"id": "2",
+							"title":"22222",
+							"count": 2	
 						},
 						{
-							"third":"33333",					"count": 3		
+							"id": "3",
+							"title":"33333",
+							"count": 3		
 						}
 						
 					]
@@ -527,13 +683,19 @@
 					"title": "Podrostkovie  emotions question 3",
 					"variants":[
 						{
-							"first":"111111",					"count": 1		
+							"id": "1",
+							"title":"111111",
+							"count": 1		
 						},
 						{
-							"second":"22222",					"count": 2	
+							"id": "2",
+							"title":"22222",
+							"count": 2	
 						},
 						{
-							"third":"33333",					"count": 3		
+							"id": "3",
+							"title":"33333",
+							"count": 3		
 						}
 						
 					]

@@ -7,15 +7,18 @@ export interface TestsItems {
 export interface TestQuestion {
             title:string,
             variants:[{
-                first:string,
+                id:string,
+                title:string,
                 count:number
             },
             {
-                second:string,
+                id:string,
+                title:string,
                 count:number
             },
             {
-                third:string,
+                id:string,
+                title:string,
                 count:number
             }
         ]

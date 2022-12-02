@@ -10,9 +10,11 @@ function Tests() {
     const dispatch = useAppDispatch()
 
     useEffect(() => {
-        if (isTestsLoading && error === '') {
+        if (error === '') {
             dispatch(fetchTests())
         }
+
+
     }, [dispatch, error, isTestsLoading])
 
     return (
