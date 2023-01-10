@@ -29,6 +29,10 @@ export const testSlice = createSlice({
             state.tests = action.payload
             state.isTestsLoading = true
             state.error = ''
+        },
+        loadCurrentTest(state, actions: PayloadAction<TestsItems>) {
+            state.currentTest = actions.payload
+            state.error = ''
         }
    
     }

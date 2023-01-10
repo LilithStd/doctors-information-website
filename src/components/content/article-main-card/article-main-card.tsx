@@ -2,9 +2,12 @@ import { Button, Card, CardActions, CardContent, CardMedia, Container, IconButto
 import FavoriteIcon from "@mui/icons-material/Favorite"
 import ShareIcon from "@mui/icons-material/Share"
 import { textAlign } from "@mui/system";
-import { useAppSelector } from "../../../store/hooks";
+import { useAppDispatch, useAppSelector } from "../../../store/hooks";
 import { ArticleItems } from "../../../types/article-types";
 import { getRandomItem } from "../../../utils/utils";
+import { useNavigate } from "react-router-dom";
+import { AppRoute } from "../../../const/app-route";
+import { fetchCurrentTest } from "../../../store/reducer/actionCreators";
 
 interface ArticleMainCardProps {
     articles: ArticleItems[]
@@ -14,6 +17,17 @@ function ArticleMainCard({ articles }: ArticleMainCardProps) {
     const { currentArticle } = useAppSelector(state => state.articleReducer)
     const { currentArticleActive } = useAppSelector(state => state.articleReducer)
     const randomArticleWithoutCurrentActive = getRandomItem(articles)
+    const navigate = useNavigate()
+    const dispatch = useAppDispatch()
+
+    if (currentArticleActive) {
+
+    }
+
+    const redirectToCurrentTestPageFromArticleHandler = () => {
+        // dispatch(fetchCurrentTest())
+        navigate(AppRoute.CurrentTest)
+    }
 
     return (
         <Container sx={{ border: "2px solid red" }}>
@@ -24,7 +38,7 @@ function ArticleMainCard({ articles }: ArticleMainCardProps) {
                     component="img"
                     height="140"
                     image={currentArticleActive ? currentArticle.images : randomArticleWithoutCurrentActive.images}
-                    alt="green iguana"
+                    alt={currentArticleActive ? currentArticle.title : randomArticleWithoutCurrentActive.title}
                 />
                 <CardContent>
                     <Typography gutterBottom variant="h5" component="div">
@@ -37,7 +51,7 @@ function ArticleMainCard({ articles }: ArticleMainCardProps) {
                 <CardActions sx={{
                     justifyContent: 'space-between'
                 }}>
-                    <Button>Пройти тест</Button>
+                    <Button onClick={redirectToCurrentTestPageFromArticleHandler}>Пройти тест</Button>
                     <IconButton aria-label="add to favorites">
                         <FavoriteIcon />
                     </IconButton>
@@ -46,23 +60,6 @@ function ArticleMainCard({ articles }: ArticleMainCardProps) {
                     </IconButton>
                 </CardActions>
             </Card>
-            {/* <Paper sx={{
-                padding: '1rem',
-                boxShadow: '5px 10px #888888',
-            }}>
-                <Paper sx={{
-                    background: '-webkit-linear-gradient(90deg, #FFFF00 0%, #EE82EE 100%)',
-                }}>
-                    <Typography variant="h2" color={"primary"} sx={{
-                        textAlign: 'center',
-                    }}>
-                        {currentArticleActive ? currentArticle.title : randomArticleWithoutCurrentActive.title}
-                    </Typography>
-                </Paper>
-                <Typography variant="h6" color="initial">
-                    {currentArticleActive ? currentArticle.text : randomArticleWithoutCurrentActive.text}
-                </Typography>
-            </Paper> */}
         </Container>
 
     );

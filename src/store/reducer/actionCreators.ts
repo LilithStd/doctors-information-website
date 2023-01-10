@@ -35,3 +35,11 @@ export const fetchTests = () =>async (dispatch: AppDispatch) => {
 
     }
 }
+
+export const fetchCurrentTest = (currentTest: TestsItems) => async (dispatch: AppDispatch) => {
+    try {
+        dispatch(testSlice.actions.loadCurrentTest(currentTest))
+    } catch {
+
+    }
+}

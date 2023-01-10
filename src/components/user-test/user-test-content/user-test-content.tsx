@@ -8,29 +8,30 @@ interface UserTestContentProps {
 }
 
 function UserTestContent({ test }: UserTestContentProps) {
-    const [isSelect, setIsSelect] = useState([{}])
-    const { id, title, questions } = test
-
-    const findElementInArray = (element: any) => {
-        return element.questions === test.id
-    }
-
-    const setChoiceHandler = (id: string) => {
-
-        if (isSelect.find(findElementInArray)) {
-            setIsSelect([{ ...questions, answer: id }])
-            console.log(isSelect);
-            console.log(1);
-
-        } else {
-            setIsSelect([...isSelect, { questions: test.id, answer: id }])
-            console.log(isSelect);
-            console.log(2);
+    const { title, questions } = test
+    const questionsArray = [...questions].map((el) => {
+        return {
+            question: el.title,
+            answer: ''
         }
+    });
 
+    const [isSelect, setIsSelect] = useState(questionsArray)
+    const [isActive, setIsActive] = useState()
 
+    const updateSelectElementHandler = (title: string, updateAnswer: string) => {
+        const copyArray = isSelect
+        const result = copyArray.map((el) => {
+            if (el.question === title) {
+                return {
+                    ...el,
+                    answer: updateAnswer
+                }
+            }
+            return el
+        });
 
-
+        setIsSelect(result)
     }
 
     return (
@@ -42,23 +43,25 @@ function UserTestContent({ test }: UserTestContentProps) {
                 <Divider />
                 {questions.map((question) => (
                     <Container key={nanoid()}>
-                        <Typography variant="h5">{question.title}</Typography>
-                        <Divider />
-                        {question.variants.map((item) => (<Button
-                            variant="contained"
-                            fullWidth
-                            onClick={() => {
-                                setChoiceHandler(item.id)
-                            }}
-                            key={nanoid()}
-                            color={isSelect ? "success" : "primary"}>
-                            {item.title}
-                        </Button>))}
+                        <Typography>{question.title}</Typography>
+                        {question.variants.map((item) => (
+                            <Button
+                                variant="contained"
+                                fullWidth
+                                onClick={() => {
+                                    updateSelectElementHandler(question.title, item.title)
+                                }}
+                                key={nanoid()}
+                                color={isSelect.some((element) => element.answer === item.title && element.question === question.title) ? "success" : "primary"}>
+                                {item.title}
+                            </Button>
+                        ))}
                         <Divider />
                     </Container>
-                ))}
-            </Paper>
-        </Container>
+                ))
+                }
+            </Paper >
+        </Container >
     );
 }
 
