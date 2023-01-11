@@ -2,6 +2,7 @@ import { Button, Container, Divider, Paper, Typography } from "@mui/material";
 import { nanoid } from "nanoid";
 import { useState } from "react";
 import { TestsItems } from "../../../types/test-types";
+import ResultModal from "../result-modal/result-modal";
 
 interface UserTestContentProps {
     test: TestsItems
@@ -12,20 +13,25 @@ function UserTestContent({ test }: UserTestContentProps) {
     const questionsArray = [...questions].map((el) => {
         return {
             question: el.title,
-            answer: ''
+            answer: '',
+            count: 0
         }
     });
 
     const [isSelect, setIsSelect] = useState(questionsArray)
-    const [isActive, setIsActive] = useState()
+    const sumAnswerCount = isSelect.reduce(
+        (accumulator, currentValue) => accumulator + currentValue.count,
+        0,
+    );
 
-    const updateSelectElementHandler = (title: string, updateAnswer: string) => {
+    const updateSelectElementHandler = (title: string, updateAnswer: string, updateCount: number) => {
         const copyArray = isSelect
         const result = copyArray.map((el) => {
             if (el.question === title) {
                 return {
                     ...el,
-                    answer: updateAnswer
+                    answer: updateAnswer,
+                    count: updateCount
                 }
             }
             return el
@@ -49,17 +55,28 @@ function UserTestContent({ test }: UserTestContentProps) {
                                 variant="contained"
                                 fullWidth
                                 onClick={() => {
-                                    updateSelectElementHandler(question.title, item.title)
+                                    updateSelectElementHandler(question.title, item.title, item.count)
                                 }}
                                 key={nanoid()}
                                 color={isSelect.some((element) => element.answer === item.title && element.question === question.title) ? "success" : "primary"}>
                                 {item.title}
                             </Button>
                         ))}
-                        <Divider />
+
                     </Container>
                 ))
                 }
+                <Divider />
+                <Container
+                    sx={{
+                        display: "flex",
+                        justifyContent: "center",
+                        border: "2px solid blue"
+                    }}
+                >
+                    <ResultModal resultCount={sumAnswerCount} />
+                </Container>
+                <Divider />
             </Paper >
         </Container >
     );
