@@ -22,7 +22,7 @@ function ResultModal({ resultCount }: ResultModalProps) {
     const [result, setResult] = useState('Не все ответы получены, возможно вы дебил не умеющий читать и считать?')
     const handleOpen = () => setOpen(true);
     const handleClose = () => setOpen(false);
-    console.log(resultCount, result);
+
 
 
     useEffect(() => {

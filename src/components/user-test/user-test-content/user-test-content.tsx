@@ -19,10 +19,27 @@ function UserTestContent({ test }: UserTestContentProps) {
     });
 
     const [isSelect, setIsSelect] = useState(questionsArray)
-    const sumAnswerCount = isSelect.reduce(
-        (accumulator, currentValue) => accumulator + currentValue.count,
-        0,
-    );
+    const testCount = (element: { count: number; }) => {
+        if (element.count === 0) {
+            return true
+        }
+
+    }
+
+    const sumAnswerCount = () => {
+        if (isSelect.some(testCount)) {
+            return 0
+        }
+        if (!isSelect.some(testCount)) {
+            return isSelect.reduce(
+                (accumulator, currentValue) => accumulator + currentValue.count,
+                0,
+
+            )
+        }
+        return 0
+
+    };
 
     const updateSelectElementHandler = (title: string, updateAnswer: string, updateCount: number) => {
         const copyArray = isSelect
@@ -74,7 +91,7 @@ function UserTestContent({ test }: UserTestContentProps) {
                         border: "2px solid blue"
                     }}
                 >
-                    <ResultModal resultCount={sumAnswerCount} />
+                    <ResultModal resultCount={sumAnswerCount()} />
                 </Container>
                 <Divider />
             </Paper >
